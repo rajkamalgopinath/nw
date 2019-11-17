@@ -23,6 +23,17 @@ exports.product_create = function (req, res) {
 };
 
 
+
+
+ exports.products = function (req, res) {
+    Product.find({}, function (err, products) {
+        if (err) return next(err);
+        res.send(products);
+    })
+};
+
+
+
 exports.product_details = function (req, res) {
     Product.findById(req.params.id, function (err, product) {
         if (err) return next(err);
