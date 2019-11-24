@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  
+
+  
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            ID
+        </th>
+    </tr>
+
+<%products.forEach((product)=> {%>
+ 
+  <tr>
+    <td>
+        <%=product.name%>
+    </td>
+    <td>
+        <a href='/products/<%=product._id%>'>Edit</a>
+    </td>
+  
+  </tr>
+
+<% })%> 
+
+</table>
+
+
+
+</div>
+
+<a href="/products/create">Create New</a>
+
+</body>
+<% include partials/script %>
+</html>

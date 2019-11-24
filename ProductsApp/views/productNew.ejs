@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<div class="container-fluid bg-3 text-center">    
+  
+<form action="/products/createNew" method="POST" class="ui form">
+
+    <div class="field">
+        <label> Name: </label>
+        <input type="text" name="name" placeholder="name" value=''>
+    </div>
+    <div class="field">
+            <label> Price: </label>
+            <input type="text" name="price" placeholder="price" value=''>
+     </div>
+
+    <input type="submit" class="button">
+
+</form>
+
+
+
+</div>
+</body>
+<% include partials/script %>
+</html>

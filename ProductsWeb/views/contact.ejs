@@ -6,6 +6,18 @@
 <body>
 <% include partials/menu %>
 
+
+<H1>hello world</H1>
+
+<%products.forEach((product)=> {%>
+  <div>
+      <h2><%=product.name%></h2>
+    
+      <h3><%=product._id%>'></h3>
+  </div>
+<% })%>
+
+
 <div class="container-fluid bg-3 text-center">    
   <h3><%= page %></h3><br>
   <div class="row">

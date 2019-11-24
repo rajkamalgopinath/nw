@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  
+<form id="productForm" action="/products/<%=product._id%>/update?_method=PUT" method="POST" class="ui form">
+    <div class="field">
+        <label> Name: </label>
+        <input type="text" name="product[name]" placeholder="name" value='<%=product.name%>'>
+    </div>
+
+    <div class="field">
+            <label> Price: </label>
+            <input type="text" name="product[price]" placeholder="price" value='<%=product.price%>'>
+     </div>
+
+    <input id="UpdateButton" type="submit" class="button" value="Update">
+    <input id="DeleteButton" type="submit" class="button" value="Delete">
+    
+</form>
+
+<script>
+$("#DeleteButton").click(function() {
+
+    $("#productForm").attr('action', "/products/<%=product._id%>/delete?_method=DELETE");
+ 
+});
+
+</script>
+
+
+
+</div>
+</body>
+<% include partials/script %>
+</html>
