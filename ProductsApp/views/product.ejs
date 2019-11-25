@@ -24,6 +24,11 @@
 </form>
 
 <script>
+$("#UpdateButton").click(function() {
+
+$("#productForm").attr('action', "/products/<%=product._id%>/update?_method=PUT");
+
+});
 $("#DeleteButton").click(function() {
 
     $("#productForm").attr('action', "/products/<%=product._id%>/delete?_method=DELETE");

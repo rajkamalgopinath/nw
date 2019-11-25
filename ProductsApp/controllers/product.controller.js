@@ -61,9 +61,13 @@ exports.product_new = function (req, res) {
 
 exports.product_update = function (req, res) {
     Product.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+
+        console.log(product.name);
+        console.log(product.price);
+        
         if (err) return next(err);
-       // res.send('Product updated.');
-        res.redirect("/products/list");
+        res.send('Product updated.');
+       // res.redirect("/products/list");
 
     });
 };
