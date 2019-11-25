@@ -28,7 +28,8 @@ app.set('view engine', 'ejs');
 // Set up mongoose connection
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://gopinrx:Kalai123!@cluster0-reyai.mongodb.net/productstutorial', { useNewUrlParser: true, useUnifiedTopology: true  })
+mongoose.connect('connectionString', { useNewUrlParser: true, useUnifiedTopology: true  })
+
 
 mongoose.Promise = global.Promise;
 
