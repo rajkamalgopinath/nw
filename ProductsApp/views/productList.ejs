@@ -41,6 +41,30 @@
 
 <a href="/products/create">Create New</a>
 
+
+<div>
+    <span><%=currentPage%></span>
+    <span><%=totalPages%></span>
+
+    
+    <a href="/products/list/<%=(currentPage==1) ? 1 : (currentPage-1) %>"><<</a>
+
+    <% for(var i=0; i<3;i++)  { %>
+
+        <%if((totalPages-currentPage)>=3) { %>
+            <a href="/products/list/<%=(currentPage+i) %>"><%= (currentPage+i) %></a>
+        <%} else {%>
+            <a href="/products/list/<%=(totalPages-i) %>"><%= (totalPages+i) %></a>
+        <% } %>
+
+
+    <% } %>
+
+
+    <a href="/products/list/<%=(currentPage==totalPages) ? totalPages : (currentPage+1) %>">>></a>
+     
+</div>
+
 </body>
 <% include partials/script %>
 </html>

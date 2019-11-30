@@ -10,12 +10,12 @@
 <form id="productForm" action="/products/<%=product._id%>/update?_method=PUT" method="POST" class="ui form">
     <div class="field">
         <label> Name: </label>
-        <input type="text" name="product[name]" placeholder="name" value='<%=product.name%>'>
+        <input type="text" name="name" placeholder="name" value='<%=product.name%>'>
     </div>
 
     <div class="field">
             <label> Price: </label>
-            <input type="text" name="product[price]" placeholder="price" value='<%=product.price%>'>
+            <input type="text" name="price" placeholder="price" value='<%=product.price%>'>
      </div>
 
     <input id="UpdateButton" type="submit" class="button" value="Update">
@@ -40,6 +40,13 @@ $("#DeleteButton").click(function() {
 
 
 </div>
+
+<div>
+    <span><%=currentPage%></span>
+    <span><%=pages%></span>
+    
+</div>
+
 </body>
 <% include partials/script %>
 </html>

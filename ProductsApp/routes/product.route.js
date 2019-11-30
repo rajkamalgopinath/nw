@@ -10,6 +10,7 @@ const product_controller = require('../controllers/product.controller');
 router.get('/create', product_controller.product_new);
 router.post('/createNew', product_controller.product_create);
 router.get('/', product_controller.products);
+router.get('/list/:page', product_controller.productList);
 router.get('/list', product_controller.productList);
 router.put('/:id/update', product_controller.product_update);
 router.get('/:id', product_controller.product_details);
